@@ -5,7 +5,7 @@ name property and has a sayHello method.
 let judy = new CallCenter("Judy");
 judy.sayHello(); // prints "Hello this is Judy"
 
-You will be writing a method on class that will be named callMeLater(time). 
+You will be writing a method on class that will be named callMeLater(time).
 The callMeLater method will intake a time in milliseconds and will invoke the
 `sayHello` method after the number of milliseconds has passed.
 
@@ -38,7 +38,15 @@ class CallCenter {
   sayHello() {
     console.log("Hello this is " + this.name);
   }
+  callMeLater(time) {
+    const bindedFunction = this.sayHello.bind(this);
+    setTimeout(bindedFunction, time);
+  }
 }
+
+let judy = new CallCenter("Judy");
+judy.sayHello(); // prints "Hello this is Judy"
+judy.callMeLater(1000); // waits one second then prints "Hello this is Judy"
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
 module.exports = CallCenter;

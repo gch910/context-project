@@ -25,6 +25,12 @@ class FancyCalculator {
     this.total = num;
     return this.total;
   }
+  modulo(num) {
+    return this.total = this.total % num;
+  }
+  squared() {
+    return this.total = this.total**2;
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/

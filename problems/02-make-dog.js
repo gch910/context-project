@@ -30,6 +30,12 @@ class Dog {
   static makeJet() {
     return new this('Jet');
   }
+  speak(word) {
+    return `${this.name} says ${word}`;
+  }
+  changeName(name) {
+    return this.name = name;
+  }
 }
 
 /**************DO NOT MODIFY ANYTHING UNDER THIS  LINE*****************/
